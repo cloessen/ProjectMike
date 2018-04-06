@@ -1,0 +1,12 @@
+<form class="push-down" fxFlexAlign="center" fxLayout="column" fxLayoutAlign="center center" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+  <mat-form-field>
+    <mat-label>Email:</mat-label>
+    <input matInput type="email" name="email" required ngModel>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Passwort:</mat-label>
+    <input matInput type="password" name="password" required ngModel>
+  </mat-form-field>
+  <button [disabled]="loginForm.invalid" mat-raised-button color="accent" type="submit">Anmelden</button>
+</form>
+

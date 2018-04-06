@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h3>Welcome</h3>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+     <!--TESTING Contentful content-->
+    <div *ngIf="content$ | async as content">
+      <h1>{{content.titel}}</h1>
+      <h3>{{content.vorschau}}</h3>
+      <div [innerHTML]="content.content | mdToHtml" class="content-body"></div>
+      <mat-chip-list>
+        <mat-chip *ngFor="let tag of content.tags" style="cursor: pointer">{{tag}}</mat-chip>
+      </mat-chip-list>
+
+    </div>
+    <span>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa eveniet ipsum omnis quam. Cupiditate esse explicabo facilis fuga impedit ipsam odit officia quas qui voluptatibus! A animi dicta earum, esse fugit maiores nisi perspiciatis praesentium, provident soluta tenetur voluptas. Dolores eum id nesciunt omnis.
+    </span>
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet aperiam asperiores at blanditiis corporis cupiditate distinctio dolore dolores doloribus, eum excepturi illum in incidunt, ipsam ipsum iste minima nam nihil odio odit omnis perferendis placeat praesentium quae quaerat quia quidem quo reiciendis repellendus repudiandae sapiente sint totam velit veritatis vero voluptatum. Dolorum error magnam numquam unde. Alias amet, aut consectetur dignissimos dolore doloribus eaque eligendi error esse exercitationem harum impedit ipsa ipsam ipsum maxime minima molestiae natus nemo neque nesciunt nisi optio pariatur perferendis quaerat quasi quia ratione reiciendis rem repellat rerum sapiente sed tempore tenetur ullam vero voluptatem.
+    </div>
+  </mat-card-content>
+</mat-card>

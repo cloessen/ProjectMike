@@ -1,0 +1,7 @@
+<div *ngFor="let post of (posts$ | async)">
+  <h4>{{post.title}}</h4>
+  <p>{{post.date | date:'fullDate'}}</p>
+  <p>{{post.body}}</p>
+  <img src="{{post.imageURL}}" style="height: 600px; width: 800px">
+
+</div>
