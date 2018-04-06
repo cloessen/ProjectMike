@@ -17,7 +17,7 @@ export class ContentfulService {
 
   logContent() {
     this.client.getEntries()
-      .then(entries => entries.items.forEach(entry => console.log(entry.fields)));
+      .then(entries => entries.items.forEach(entry => console.log(entry)));
   }
 
   getContent(contentId) {
