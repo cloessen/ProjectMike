@@ -11,7 +11,7 @@ import { Observable } from 'rxjs/Observable';
 export class WelcomeComponent implements OnInit {
   content$: Observable<any>;
 
-  constructor(private contentful : ContentfulService) { }
+  constructor(private contentful: ContentfulService) { }
 
   ngOnInit() {
     this.content$ = this.contentful.getContent('5jn8cwdxZ6eSAKcEuuyEGE');

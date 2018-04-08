@@ -9,7 +9,7 @@ import { ContentfulService} from './contentful.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
   isAuth$: Observable<firebase.User>;
 
