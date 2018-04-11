@@ -1,19 +1,22 @@
-mat-sidenav-container, mat-sidenav-content, mat-sidenav{
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
   height: 100%;
 }
 
-mat-sidenav{
+mat-sidenav {
   width: 275px;
 }
-.nav-caption{
-   display: inline-block;
-   padding-left: 5px;
+.nav-caption {
+  display: inline-block;
+  padding-left: 5px;
 }
 
 .header-gt-sm {
-  height: 400px;
-  background-image: url('../assets/new_header_bg.jpeg');
+  height: 375px;
+  background-image: url("../assets/Altenholz-02a.jpg");
   background-size: cover;
+  background-position: center center;
   display: flex;
 }
 .header-lt-md {
@@ -23,7 +26,7 @@ mat-sidenav{
 //  position: relative;
 //}
 
-.header-name{
+.header-name {
   padding: 6px;
   top: 45px;
   opacity: 0.8;
@@ -31,28 +34,27 @@ mat-sidenav{
   background-color: lightgray;
   border-radius: 10px;
 }
-.header-name-lt-md{
+.header-name-lt-md {
   padding: 2px;
   font-size: 1rem;
-
 }
-.header-social-media{
+.header-social-media {
   //background-color: lightgray;
   height: 75px;
   border-radius: 10px;
 }
-.header-image-cdu{
-  background-image: url('../assets/logo.png');
-  background-size: contain;
-  width: 204px;
-  height: 72px;
+.header-image-cdu {
+  background-image: url("../assets/gilde_logo.jpg");
+  background-size: cover;
+  width: 270px;
+  height: 100px;
 }
-.header-image-cdu-lt-md{
+.header-image-cdu-lt-md {
   width: 102px;
   height: 36px;
 }
 
-.mat-tab-link{
+.mat-tab-link {
   font-weight: bold !important;
   //border-top: 2px solid red;
   //background-color: red;

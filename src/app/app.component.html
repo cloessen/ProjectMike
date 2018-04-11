@@ -1,66 +1,50 @@
 <header fxLayout="row" class="header-gt-sm" [ngClass.lt-md]="['header-lt-md']">
   <div class="spacer-div" fxFlex="10" fxHide.lt-md></div>
 
-  <div class="header-content" fxFlex="column" fxLayoutAlign="space-evenly center" >
+  <div class="header-content" fxFlex="column" fxLayoutAlign="space-evenly center">
     <div>
       <span class="header-name">Mike Buchau</span>
     </div>
     <div class="header-social-media" fxFlexAlign="end" fxHide.lt-md>
       <!--<div fxLayoutAlign="space-evenly center">-->
-        <!--<a href="https://www.facebook.com/mike.buchau" target="_blank" ><i class="fab fa-facebook-f fa-2x"></i></a>-->
-        <!--<div style="width: 20px"></div>-->
-        <!--<a href="https://twitter.com/mikebuchau" target="_blank"><mat-icon color="accent" matTooltip="Facebook"><i class="fab fa-twitter fa-2x"></i></mat-icon></a>-->
-        <!--<div style="width: 40px"></div>-->
-        <!--<a href="https://www.instagram.com/mike.buchau/" target="_blank"><mat-icon color="accent" matTooltip="Facebook"><i class="fab fa-instagram fa-2x"></i></mat-icon></a>-->
+      <!--<a href="https://www.facebook.com/mike.buchau" target="_blank" ><i class="fab fa-facebook-f fa-2x"></i></a>-->
+      <!--<div style="width: 20px"></div>-->
+      <!--<a href="https://twitter.com/mikebuchau" target="_blank"><mat-icon color="accent" matTooltip="Facebook"><i class="fab fa-twitter fa-2x"></i></mat-icon></a>-->
+      <!--<div style="width: 40px"></div>-->
+      <!--<a href="https://www.instagram.com/mike.buchau/" target="_blank"><mat-icon color="accent" matTooltip="Facebook"><i class="fab fa-instagram fa-2x"></i></mat-icon></a>-->
       <!--</div>-->
     </div>
   </div>
-  <div class="header-image-cdu" fxFlexAlign="start" [ngClass.lt-md]="['header-image-cdu-lt-md']">
+  <div class="header-image-cdu" fxFlexAlign="end" [ngClass.lt-md]="['header-image-cdu-lt-md']">
   </div>
   <div style="clear: both"></div>
 
 </header>
 
 <nav mat-tab-nav-bar color="accent" fxLayout fxLayoutAlign="center" fxLayoutGap="50px" fxHide.lt-md>
-    <a mat-tab-link
-       routerLink='/welcome'
-       routerLinkActive #start="routerLinkActive"
-       [active]="start.isActive">
-      Startseite
-    </a>
-    <a mat-tab-link
-       routerLink='/news'
-       routerLinkActive #news="routerLinkActive"
-       [active]="news.isActive">
-      Aktuelles
-    </a>
-    <a mat-tab-link
-       routerLink='/person'
-       routerLinkActive #person="routerLinkActive"
-       [active]="person.isActive">
-      Über Mich
-    </a>
-    <a mat-tab-link
-       routerLink='/termine'
-       routerLinkActive #termine="routerLinkActive"
-       [active]="termine.isActive">
-      Termine & Veranstaltungen
-    </a>
+  <a mat-tab-link routerLink='/welcome' routerLinkActive #start="routerLinkActive" [active]="start.isActive">
+    Startseite
+  </a>
+  <a mat-tab-link routerLink='/news' routerLinkActive #news="routerLinkActive" [active]="news.isActive">
+    Aktuelles
+  </a>
+  <a mat-tab-link routerLink='/person' routerLinkActive #person="routerLinkActive" [active]="person.isActive">
+    Über Mich
+  </a>
+  <a mat-tab-link routerLink='/termine' routerLinkActive #termine="routerLinkActive" [active]="termine.isActive">
+    Termine & Veranstaltungen
+  </a>
 </nav>
 <mat-expansion-panel #panel hideToggle='true' fxHide.gt-sm>
   <mat-expansion-panel-header>
     <mat-panel-description>
       <!--<button mat-icon-button color="primary" (click)="panel.toggle()">-->
-        <mat-icon>menu</mat-icon>
+      <mat-icon>menu</mat-icon>
       <!--</button>-->
     </mat-panel-description>
   </mat-expansion-panel-header>
   <mat-action-row>
-    <a class="mat-tab-link mat-tab-label mat-tab-links"
-      mat-raised-button
-      routerLink='/welcome'
-       routerLinkActive #start="routerLinkActive"
-       >
+    <a class="mat-tab-link mat-tab-label mat-tab-links" mat-raised-button routerLink='/welcome' routerLinkActive #start="routerLinkActive">
       Startseite
     </a>
   </mat-action-row>
@@ -73,9 +57,7 @@
 
   <div class="spacer-div" fxFlex="10" fxHide.lt-md></div>
 </div>
-  <!--</mat-sidenav-content>-->
+<!--</mat-sidenav-content>-->
 <!--</mat-sidenav-container>-->
 
-    <!--<button mat-raised-button (click)="sidenav.toggle()">Toggle Sidenav</button>-->
-
-
+<!--<button mat-raised-button (click)="sidenav.toggle()">Toggle Sidenav</button>-->
