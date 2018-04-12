@@ -14,7 +14,7 @@ export const environment = {
     messagingSenderId: '377230994925'
   },
   contentful: {
-    spaceId: 'gg487pew0xv8',
-    token: 'e20394a3220973573499b21793b621224863a71f15c9c0066cbcebe00d2193d6',
+    spaceId: '6wsw3mwdz1ta',
+    token: '3454ed6471b49dc9c3da8188e650bb72c1e0b0a76a4d10f7c186e0609413712f',
   }
 };

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../contentful.service';
 import { Observable } from 'rxjs/Observable';
+import { map } from 'rxjs/operators';
+import { Entry, EntryCollection } from 'contentful';
 
 
 @Component({
@@ -9,12 +11,12 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
-  content$: Observable<any>;
+  contents$: Observable<Entry<any>[]>;
 
   constructor(private contentful: ContentfulService) { }
 
   ngOnInit() {
-    this.content$ = this.contentful.getContent('5jn8cwdxZ6eSAKcEuuyEGE');
+    this.contents$ = this.contentful.getAllBlogPosts();
   }
 
 }
