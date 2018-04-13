@@ -28,6 +28,7 @@ import { registerLocaleData } from "@angular/common";
 import localeDe from "@angular/common/locales/de";
 import { ContentfulService } from "./contentful.service";
 import { MdToHtmlPipe } from "./md-to-html.pipe";
+import { ReadMorePipe } from './read-more.pipe';
 
 registerLocaleData(localeDe);
 
@@ -39,7 +40,8 @@ registerLocaleData(localeDe);
     TermineComponent,
     NewsComponent,
     LoginComponent,
-    MdToHtmlPipe
+    MdToHtmlPipe,
+    ReadMorePipe
   ],
   imports: [
     BrowserModule,
@@ -52,11 +54,11 @@ registerLocaleData(localeDe);
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    ServiceWorkerModule.register("/ngsw-worker.js", {
+    ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production
     })
   ],
   providers: [AuthService, UIService, PostsService, ContentfulService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

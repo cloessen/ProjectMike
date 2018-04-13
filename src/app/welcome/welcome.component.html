@@ -10,7 +10,7 @@
     <div *ngFor="let content of contents$ | async">
       <h1>{{content.fields.title}}</h1>
       <!-- <h3>{{content.fields.vorschau}}</h3> -->
-      <div [innerHTML]="content.fields.body | mdToHtml" class="content-body"></div>
+      <div [innerHTML]="content.fields.body | readMore | mdToHtml " class="content-body"></div>
       <!-- <mat-chip-list>
         <mat-chip *ngFor="let tag of content.fields.tags" style="cursor: pointer">{{tag}}</mat-chip>
       </mat-chip-list> -->

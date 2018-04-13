@@ -28,7 +28,7 @@ export class ContentfulService {
       .then(entries => console.log(entries));
   }
   getAllBlogPosts() {
-    const promise = this.client.getEntries({ limit: 10, content_type: CONTENT_TYPES.blogPost });
+    const promise = this.client.getEntries({ limit: 10, content_type: CONTENT_TYPES.blogPost, order: '-sys.createdAt' });
     return Observable.fromPromise(promise).pipe(map(entry => entry.items));
   }
 
