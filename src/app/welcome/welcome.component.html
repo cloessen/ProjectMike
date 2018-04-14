@@ -4,13 +4,14 @@
       <h3>Welcome</h3>
     </mat-card-title>
   </mat-card-header>
-  <mat-card-content>
+  <mat-card-content> 
     <div></div>
     <!--TESTING Contentful content-->
     <div *ngFor="let content of contents$ | async">
       <h1>{{content.fields.title}}</h1>
       <!-- <h3>{{content.fields.vorschau}}</h3> -->
-      <div [innerHTML]="content.fields.body | readMore | mdToHtml " class="content-body"></div>
+      <div [innerHTML]="content.fields.body | readMore | mdToHtml " class="content-body" style="margin-bottom: 0"></div>
+      <button *ngIf="content.fields.body.length > 500" style="margin-top: 0;" (click)="onShowPostDetails(content)">...weiter lesen</button>
       <!-- <mat-chip-list>
         <mat-chip *ngFor="let tag of content.fields.tags" style="cursor: pointer">{{tag}}</mat-chip>
       </mat-chip-list> -->

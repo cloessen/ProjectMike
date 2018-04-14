@@ -3,7 +3,7 @@
 
   <div class="header-content" fxFlex="column" fxLayoutAlign="space-evenly center">
     <div>
-      <span class="header-name">Altenholzer Knochenbruchgilde v. 1839</span>
+      <span class="header-name">Altenholzer Knochenbruchgilde von 1839</span>
     </div>
     <div class="header-social-media" fxFlexAlign="end" fxHide.lt-md>
       <!--<div fxLayoutAlign="space-evenly center">-->
@@ -33,7 +33,7 @@
   <a mat-tab-link routerLink='/termine' routerLinkActive #termine="routerLinkActive" [active]="termine.isActive">
     Termine & Veranstaltungen
   </a>
-  <a mat-tab-link routerLink='/post-detail' routerLinkActive #postDetail="routerLinkActive" [active]="postDetail">
+  <a mat-tab-link routerLink='/post-detail' routerLinkActive #postDetail="routerLinkActive" [active]="postDetail.isActive">
     Details Test
   </a>
 </nav>

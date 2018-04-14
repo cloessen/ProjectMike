@@ -12,9 +12,7 @@ export class ReadMorePipe implements PipeTransform {
       return value;
     } else {
       const trimmedString = value.substr(0, this.stringLength);
-      return trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(' ')))
-        + ' __[mehr...](https://google.com "mehr...")__';
+      return trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(' '))) + ' ...';
     }
   }
-
 }

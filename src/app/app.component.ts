@@ -4,7 +4,7 @@ import * as firebase from 'firebase/app';
 import { AuthService } from './shared/auth.service';
 import { ContentfulService } from './contentful.service';
 import { Store } from '@ngrx/store';
-import { State } from './app.reducer';
+import { AppState } from './app.reducer';
 
 @Component({
   selector: 'app-root',
@@ -18,12 +18,12 @@ export class AppComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private contentful: ContentfulService,
-    private store: Store<{ app: State }>) { }
+    private store: Store<{ app: AppState }>) { }
 
   ngOnInit() {
     this.isAuth$ = this.authService.getAuthState();
-    this.contentful.logContent();
-    this.store.subscribe(data => console.log(data));
+    // this.contentful.logContent();
+    // this.store.subscribe(data => console.log(data));
   }
 
   onLogout() {
