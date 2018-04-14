@@ -11,12 +11,12 @@ import { Observable } from 'rxjs/Observable';
 })
 export class PostDetailComponent implements OnInit {
 
-  public post$: Observable<Entry<any>>;
+  public post$: Observable<any>;
 
   constructor(private store: Store<AppState>) { }
 
   ngOnInit() {
-    this.post$ = this.store.pipe(select('currentPost'));
+    this.post$ = this.store.pipe(select('app'));
   }
 
 }

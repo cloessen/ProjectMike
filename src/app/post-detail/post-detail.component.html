@@ -1,11 +1,9 @@
 <div *ngIf="(post$ | async) as post">
-    <h1>{{post.fields.title}}</h1>
-    <!-- <h3>{{content.fields.vorschau}}</h3> -->
-    <div [innerHTML]="post.fields.body | mdToHtml " class="content-body" style="margin-bottom: 0"></div>
-    <!-- <button *ngIf="content.fields.body.length > 500" style="margin-top: 0;" (click)="onShowPostDetails(content)">...weiter lesen</button> -->
-    <!-- <mat-chip-list>
+  <h1>{{post.fields.title}}</h1>
+  <!-- <h3>{{content.fields.vorschau}}</h3> -->
+  <div [innerHTML]="post.fields.body | mdToHtml " class="content-body" style="margin-bottom: 0"></div>
+  <!-- <button *ngIf="content.fields.body.length > 500" style="margin-top: 0;" (click)="onShowPostDetails(content)">...weiter lesen</button> -->
+  <!-- <mat-chip-list>
       <mat-chip *ngFor="let tag of content.fields.tags" style="cursor: pointer">{{tag}}</mat-chip>
     </mat-chip-list> -->
-
-  </div>
-
+</div>
