@@ -33,6 +33,7 @@ import { MdToHtmlPipe } from './md-to-html.pipe';
 import { ReadMorePipe } from './read-more.pipe';
 import { appReducer } from './app.reducer';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { ContentComponent } from './content/content.component';
 
 registerLocaleData(localeDe);
 
@@ -46,7 +47,8 @@ registerLocaleData(localeDe);
     LoginComponent,
     MdToHtmlPipe,
     ReadMorePipe,
-    PostDetailComponent
+    PostDetailComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

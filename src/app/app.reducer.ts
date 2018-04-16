@@ -1,5 +1,5 @@
 import { Entry } from 'contentful';
-import { AppActionTypes , AppActionsUnion } from './app.actions';
+import { AppActionTypes, AppActionsUnion } from './app.actions';
 
 export interface AppState {
     isLoading: boolean;
