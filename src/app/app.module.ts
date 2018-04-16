@@ -31,7 +31,7 @@ import localeDe from '@angular/common/locales/de';
 import { ContentfulService } from './contentful.service';
 import { MdToHtmlPipe } from './md-to-html.pipe';
 import { ReadMorePipe } from './read-more.pipe';
-import { appReducer } from './app.reducer';
+import { reducers } from './app.reducer';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { ContentComponent } from './content/content.component';
 
@@ -64,7 +64,7 @@ registerLocaleData(localeDe);
     ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production
     }),
-    StoreModule.forRoot({ app: appReducer }),
+    StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production // Restrict extension to log-only mode
@@ -73,4 +73,4 @@ registerLocaleData(localeDe);
   providers: [AuthService, UIService, PostsService, ContentfulService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

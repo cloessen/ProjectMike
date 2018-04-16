@@ -4,7 +4,6 @@ import * as firebase from 'firebase/app';
 import { AuthService } from './shared/auth.service';
 import { ContentfulService } from './contentful.service';
 import { Store } from '@ngrx/store';
-import { AppState } from './app.reducer';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +11,12 @@ import { AppState } from './app.reducer';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
   isAuth$: Observable<firebase.User>;
 
   constructor(
     private authService: AuthService,
-    private contentful: ContentfulService,
-    private store: Store<{ app: AppState }>) { }
+    private contentful: ContentfulService
+  ) {}
 
   ngOnInit() {
     this.isAuth$ = this.authService.getAuthState();

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { AppState } from '../app.reducer';
 import { Entry } from 'contentful';
 import { Observable } from 'rxjs/Observable';
 
@@ -10,13 +9,9 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./post-detail.component.scss']
 })
 export class PostDetailComponent implements OnInit {
-
   public post$: Observable<any>;
 
-  constructor(private store: Store<AppState>) { }
+  constructor() {}
 
-  ngOnInit() {
-    this.post$ = this.store.pipe(select('app'));
-  }
-
+  ngOnInit() {}
 }
